@@ -27,7 +27,7 @@ jobs:
 
       - name: Testing Secrets
         run: |
-         echo "$DEVOPS"
+         echo "$DEVOP"
         env:
          DEVOPS: ${{ secrets.SECRETS_TOKEN }}
          
