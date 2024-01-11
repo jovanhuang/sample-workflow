@@ -27,7 +27,10 @@ jobs:
 
       - name: Testing Secrets
         run: |
-         echo "$DEVOP"
+          if [ "$DEVOPS" == "DevOpsHint"]
+          then
+            echo "Got our secret"
+        
         env:
          DEVOPS: ${{ secrets.SECRETS_TOKEN }}
          
